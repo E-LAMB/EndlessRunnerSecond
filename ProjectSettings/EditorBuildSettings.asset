@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 828e7d10f1b79ac46b915ebc50e9ff03
+  - enabled: 1
+    path: Assets/Scenes/Gameplay.unity
+    guid: 1c88fbe8650ba3941931a03e3b8916a2
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 4d31a409f2bfe37419163bc477b4f9f0
+  - enabled: 1
+    path: Assets/Scenes/DeathFall.unity
+    guid: fbc51850613fae04db7fd02888a475ae
+  - enabled: 1
+    path: Assets/Scenes/DeathFog.unity
+    guid: 78eca5cd6f89f0846b76416a402369b1
+  m_configObjects: {}
