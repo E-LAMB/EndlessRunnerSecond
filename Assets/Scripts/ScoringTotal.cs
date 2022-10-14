@@ -6,34 +6,15 @@ using UnityEngine.UI;
 public class ScoringTotal : MonoBehaviour
 {
 
-    public static ScoringTotal instance;
+    public int score = 0;
 
-    public static int score = 0;
-    public int points;
+    public GameObject scoreText;
 
-    public Text scoreText;
-
-    private void Awake()
+    public void ScoringAdding()
     {
-        instance = this;
-    }
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        scoreText.text = scoreText.ToString() + " POINTS";
-    }
-
-    public void gains_points()
-    {
+        scoreText.GetComponent<Text>().text = "SCORE: " + score;
         score += 1;
-        scoreText.text = scoreText.ToString() + " POINTS";
-    }
-
-    private void Update()
-    {
-        points = score;
+        Debug.Log("Point earned");
     }
 
 }

@@ -14,6 +14,8 @@ public class PeopleDetector : MonoBehaviour
     public bool isScored = false;
     public bool angelMode = false;
 
+    public ScoringTotal ScoringTotal;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +29,14 @@ public class PeopleDetector : MonoBehaviour
         if (isDead == false)
         {
 
-        isDead = Physics2D.OverlapCircle(peopleChecker.transform.position, 1.5f, whatIsDeath);
+        isDead = Physics2D.OverlapCircle(peopleChecker.transform.position, 3.5f, whatIsDeath);
 
         }
 
         if (isDead == true && isScored == false)
         {
             isScored = true;
-            ScoringTotal.instance.gains_points();
+            ScoringTotal.ScoringAdding();
         }
 
         if (isDead == true && angelMode == true) 

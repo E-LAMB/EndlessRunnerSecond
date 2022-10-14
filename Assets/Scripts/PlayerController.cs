@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     bool isOnGround = false;
     Animator anim;
 
+    public AudioClip music;
+    public AudioSource musicPlayer;
+
     public bool inrush = false;
     public int rushspeed = 1;
     public float rushcooldown = 0f;
@@ -37,6 +40,11 @@ public class PlayerController : MonoBehaviour
     {
         playerObject = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        musicPlayer.clip = music;
+        musicPlayer.loop = true;
+        musicPlayer.Play();
+
     }
 
     // Update is called once per frame 
