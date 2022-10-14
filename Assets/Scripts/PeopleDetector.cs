@@ -8,9 +8,6 @@ public class PeopleDetector : MonoBehaviour
     public GameObject peopleChecker;
     public LayerMask whatIsDeath;
 
-    static int points;
-    static int maxium;
-
     Rigidbody2D currentObject;
 
     public bool isDead = false;
@@ -21,7 +18,6 @@ public class PeopleDetector : MonoBehaviour
     void Start()
     {
         currentObject = GetComponent<Rigidbody2D>();
-        maxium += 1;
     }
 
     // Update is called once per frame
@@ -38,7 +34,7 @@ public class PeopleDetector : MonoBehaviour
         if (isDead == true && isScored == false)
         {
             isScored = true;
-            points += 1;
+            ScoringTotal.instance.gains_points();
         }
 
         if (isDead == true && angelMode == true) 
